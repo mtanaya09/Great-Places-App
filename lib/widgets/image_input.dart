@@ -7,20 +7,20 @@ class ImageInput extends StatefulWidget {
 }
 
 class _ImageInputState extends State<ImageInput> {
-  late File _storedImage;
+  File _storedImage;
 
-  @override
-  void initState(){
-    _storedImage = File('');
-    super.initState();
-  }
+  // @override
+  // void initState(){
+  //   _storedImage = File('');
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Container(
-          width: 100,
+          width: 150,
           height: 100,
           decoration: BoxDecoration(
             border: Border.all(
@@ -35,7 +35,10 @@ class _ImageInputState extends State<ImageInput> {
                   fit: BoxFit.cover,
                   width: double.infinity,
                 )
-              : const Text('No Image Taken'),
+              : const Text(
+                  'No Image Taken',
+                  textAlign: TextAlign.center,
+                ),
         ),
         const SizedBox(width: 10),
         Expanded(
